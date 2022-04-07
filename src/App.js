@@ -29,15 +29,16 @@ export default function App() {
 					}
 					return maxPointColor;
 				})
+				let summary = "Tổng điểm: Màu đỏ: " + totalPoints.Red + " - Màu xanh dương: " + totalPoints.Blue + " - Màu vàng: " + totalPoints.Yellow + " - Màu xanh lá: " + totalPoints.Green + "\nMàu chủ đạo của bạn là: ";
 				switch(maxPointColor) {
-					case "Red": 
-						return answer_data["Red"];
+					case "Red":
+						return summary + answer_data["Red"];
 					case "Blue":
-						return answer_data["Blue"];
+						return summary + answer_data["Blue"];
 					case "Yellow":
-						return answer_data["Yellow"];
+						return summary + answer_data["Yellow"];
 					case "Green":
-						return answer_data["Green"];
+						return summary + answer_data["Green"];
 					default:
 						return "Khong load duoc";
 				}
